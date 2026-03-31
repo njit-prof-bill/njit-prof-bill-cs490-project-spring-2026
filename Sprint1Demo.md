@@ -157,7 +157,7 @@ Team should answer briefly and show artifacts only when needed.
 
 ---
 
-## Sprint 1 Scoring Rubric (Suggested)
+## Sprint 1 Scoring Rubric
 
 Total: 50 points
 
