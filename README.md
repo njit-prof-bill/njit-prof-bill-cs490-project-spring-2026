@@ -391,5 +391,3 @@ If you are unsure where a feature belongs:
 1. Ask whether it is **user-centric**, **document-centric**, or **job-centric**.
 2. Place it in Profile, Document Library, or Dashboard/Job Board accordingly.
 3. Default to Dashboard/Job Board for application workflow features.
-
-This project is still ambitious, but the scope is intentionally tighter this semester so teams can deliver cleaner architecture, better UX, and stronger demos.
