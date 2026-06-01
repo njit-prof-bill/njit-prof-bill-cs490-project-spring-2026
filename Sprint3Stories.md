@@ -182,7 +182,7 @@ These rules are authoritative for Sprint 3 implementation and grading.
 
 21. **S3-021 - Expand Unit Test Coverage for Document Logic**
     Outcome: Document versioning, archive/restore, upload/download, and job-link ownership rules are unit-tested.
-    Rules: S3-BR-001, S3-BR-007, S3-BR-009, S3-BR-010, S3-BR-012
+    Rules: S3-BR-007, S3-BR-010, S3-BR-012
 
 22. **S3-022 - Final Release Readiness and Demo Hardening**
     Outcome: Team completes release checklist, smoke tests, and demo stabilization.

@@ -123,11 +123,11 @@ These rules are authoritative for Sprint 1 implementation and grading.
 
 10. **S1-010 - Implement User Self-Registration**
     Outcome: New users can create accounts through a registration form with validation and duplicate-email handling.
-    Rules: S1-BR-001, S1-BR-005, S1-BR-006
+    Rules: S1-BR-001, S1-BR-003, S1-BR-006
 
 11. **S1-011 - Implement User Login and Session Handling**
     Outcome: Registered users can sign in and maintain authenticated session state.
-    Rules: S1-BR-001, S1-BR-005, S1-BR-006
+    Rules: S1-BR-001, S1-BR-005
 
 12. **S1-012 - Implement Logout and Session Invalidation**
     Outcome: Users can sign out cleanly and protected data becomes inaccessible until next login.

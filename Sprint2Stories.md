@@ -210,4 +210,4 @@ These rules are authoritative for Sprint 2 implementation and grading.
 
 26. **S2-026 - Add Unit Tests for Job Workflow and Profile Completion Logic**
     Outcome: Core domain logic for stage transitions, timeline events, and profile completeness is unit-tested.
-    Rules: S2-BR-009, S2-BR-014, S2-BR-017, S2-BR-022, S2-BR-023
+    Rules: S2-BR-009, S2-BR-014, S2-BR-022
