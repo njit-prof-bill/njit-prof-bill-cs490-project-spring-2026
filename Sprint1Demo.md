@@ -1,199 +1,129 @@
-# Sprint 1 Demo Script (Spring 2026)
+# Sprint 1 Demo Script and Grading Checklist (Spring 2026)
 
 _ATS for Candidates - CS 490 Capstone_
 
-## Demo Intent
+## 1. Purpose
 
-Sprint 1 demo has two goals:
+This is a single source of truth for Sprint 1 demo execution and grading.
 
-1. Verify that each team delivered the Sprint 1 baseline product outcomes.
-2. Verify that the team understands its architecture and implementation choices.
+It combines:
 
-This is not a feature tour. It is a focused verification demo.
+1. The live demo script teams must follow.
+2. The objective grading checklist used during the demo.
+3. The penalty model.
+4. The separate subjective Q&A scoring section.
 
-## Class Timing Model
+## 2. Timing and Structure
 
-There are 6 teams and a 2-hour demo window. To finish on time, each team has a strict 15-minute presentation slot, with a 5-minute setup/transition allocation outside the team presentation time.
+Per team:
 
-### Per-Team Timebox (15 minutes presentation time)
+1. **15 minutes**: setup and live demo run.
+2. **5 minutes**: instructor Q&A.
 
-1. **Phase A - Scripted Product Demo**: 8 minutes
-2. **Phase B - Technical Evidence and Q&A**: 7 minutes
+Total: **20 minutes**.
 
-### Setup/Transition Allocation (5 minutes each)
+## 3. Scoring Model
 
-This 5-minute allocation is used:
+### 3.1 Objective Checklist Score
 
-1. Before the first team begins.
-2. Between team presentations for projector/device transition.
+1. There are **25 checklist items**.
+2. Each item is binary: `1` (demonstrated) or `0` (not demonstrated).
+3. Objective subtotal = sum of 25 checklist items.
 
-Suggested sequence per team block:
+### 3.2 Demo Bug/Fault Penalty (No Cap)
 
-1. **Transition/Setup**: 5 minutes
-2. **Phase A - Scripted Product Demo**: 8 minutes
-3. **Phase B - Technical Evidence and Q&A**: 7 minutes
+1. Teams lose **1 point for each confirmed bug/failure** exposed during the demo.
+2. No cap is applied.
 
-## Time Enforcement Rules
+Confirmed bug/failure means any of the following:
 
-1. Team presentation clock starts when the 15-minute presentation slot begins.
-2. Setup/transition is limited to the 5-minute allocation outside presentation time.
-3. Missing evidence is scored as missing; extra time is not granted.
-4. One presenter should drive. One backup teammate may assist if needed.
+1. Crash, unhandled runtime error, or broken flow during a required checklist step.
+2. Behavior that clearly contradicts the listed Sprint 1 requirement being demonstrated.
+3. Required evidence unavailable when requested (for example, required test evidence page cannot be shown).
 
----
+### 3.3 Subjective Q&A Score
 
-## Required Preparation (Before Demo Day)
+1. Q&A is the only subjective component.
+2. Suggested Q&A score range: 0 to 5.
 
-Each team must be ready with:
+### 3.4 Recommended Total
 
-1. A working deployed or runnable environment for live demo.
-2. Two test accounts:
-   - User A (owner of visible sample data)
-   - User B (different user for ownership/isolation checks)
-3. Seed data for dashboard and profile baseline.
-4. CI evidence ready to show quickly (build + test checks).
-5. Unit test evidence ready to show quickly, including at least one non-happy-path test.
-6. Architecture baseline document from Sprint 1 lab.
+1. Recommended total score = `Objective Checklist (0-25) - Bug Penalties + Q&A (0-5)`.
 
-Recommended:
+## 4. Required Preparation (Before Demo Day)
 
-1. Keep a one-page "demo run sheet" with exact click path.
-2. Keep credentials and key URLs ready in a text file.
+Teams must be ready with:
 
----
+1. Runnable app environment.
+2. Two accounts (User A and User B).
+3. Seed data including non-engineering profile content.
+4. Seed jobs prepared for Dashboard baseline demonstration.
+5. GitHub Actions page ready for CI and test evidence.
+6. At least three negative unit tests ready to show and explain.
 
-## Phase A - Scripted Product Demo (8 minutes)
+## 5. Live Demo Script (Tied to Checklist)
 
-Show only the required Sprint 1 outcomes.
+Run in this order to match grading flow:
 
-### A1. Authentication Baseline (2 minutes)
+1. Readiness and data checks: `C01-C04`.
+2. Authentication flow and negative auth checks: `C05-C09`.
+3. Ownership/security evidence: `C10`.
+4. Dashboard baseline flow: `C11-C15`.
+5. Profile baseline and validation flow: `C16-C19`.
+6. Settings and UI consistency checks: `C20-C22`.
+7. GitHub Actions CI and test evidence: `C23-C25`.
+8. Instructor Q&A (subjective section).
 
-Required actions:
+## 6. Sprint 1 Objective Checklist (25 Items)
 
-1. Register a new user account (or show pre-created account and explain registration flow).
-2. Login with valid credentials.
-3. Logout and verify protected route behavior.
-4. Attempt access to protected page while logged out; show redirect/denied behavior.
+Use this checklist live during demo. Each row is `1` or `0`.
 
-### A2. Dashboard Baseline (3 minutes)
+| ID | Checklist Item (Yes/No) | Evidence To Observe | Sprint 1 Story Coverage | Score |
+|---|---|---|---|---|
+| C01 | Team is ready to begin on time when called | Demo starts without delay beyond allocated transition/setup | S1-005, S1-008 |  |
+| C02 | Demo environment is operational at start (app loads successfully) | App loads and is usable before scripted steps begin | S1-005, S1-009 |  |
+| C03 | Prepared data includes at least one non-engineering profile | Profile data shown is not limited to software roles only | S1-022, S1-023 |  |
+| C04 | Two distinct accounts are prepared (User A and User B) | Team can switch between accounts for security checks | S1-010 to S1-015 |  |
+| C05 | User registration works with email and password | New user can be created successfully | S1-010 |  |
+| C06 | Duplicate-email registration is rejected with clear message (negative) | Duplicate registration attempt fails with meaningful feedback | S1-010 |  |
+| C07 | Valid login works for registered user | User reaches authenticated state after login | S1-011 |  |
+| C08 | Invalid password login shows meaningful error (negative) | Login fails gracefully with clear message | S1-011 |  |
+| C09 | Logout invalidates session and protected page access is denied (negative) | After logout, protected route/API access is blocked | S1-012, S1-014 |  |
+| C10 | User B cannot view/modify User A owned data (negative security case) | Cross-user access attempt fails as expected | S1-015 |  |
+| C11 | Dashboard opens as primary workspace | Dashboard is the main post-login home flow | S1-016, S1-018 |  |
+| C12 | Job cards render baseline fields | Card includes title, company, stage, last activity | S1-020 |  |
+| C13 | Team can create a new job from dashboard flow | New job appears after create action | S1-019, S1-021 |  |
+| C14 | Team can edit an existing job from dashboard flow | Existing job update is reflected on UI | S1-019, S1-021 |  |
+| C15 | Job data persists after refresh/navigation | Created/edited job remains after reload | S1-019, S1-021 |  |
+| C16 | Profile baseline section is present (identity/contact + summary) | Required Sprint 1 profile sections are visible | S1-022 |  |
+| C17 | Profile baseline update saves successfully | Edited profile fields persist after save | S1-022 |  |
+| C18 | Profile completion indicator updates when baseline data changes | Indicator changes after update to baseline fields | S1-023 |  |
+| C19 | Profile validation failure shows clear field-level feedback (negative) | Invalid/missing required input produces clear validation message | S1-022, S1-023 |  |
+| C20 | Settings page exists and is reachable in app shell | Settings is present and navigable | S1-017 |  |
+| C21 | Typography is consistent across Dashboard, Profile, and Settings | Same typographic system is used across major Sprint 1 screens | S1-016, S1-017, S1-018 |  |
+| C22 | Form and error styling is consistent across major Sprint 1 screens | Inputs/labels/errors follow consistent style rules | S1-016, S1-022, S1-023 |  |
+| C23 | Team opens GitHub Actions and shows latest relevant workflow run | Actions page is shown live with recent run context | S1-008 |  |
+| C24 | GitHub Actions evidence shows build + unit test execution | Workflow details clearly include build/test jobs | S1-007, S1-008 |  |
+| C25 | Team is prepared to show at least three negative unit tests and explain each | Three negative tests are shown and briefly explained | S1-007, S1-015 |  |
 
-Required actions:
+## 7. Subjective Q&A (Only Subjective Portion)
 
-1. Open Dashboard (home page).
-2. Show job cards with baseline fields.
-3. Create a new job.
-4. Edit an existing job.
-5. Show job persistence after refresh.
+Suggested Q&A prompts:
 
-### A3. Profile Baseline (2 minutes)
+1. Why this architecture and stack for Sprint 1?
+2. Where is ownership enforcement implemented in backend logic?
+3. What tradeoff did the team make in Sprint 1 and why?
+4. What is the biggest technical risk going into Sprint 2?
 
-Required actions:
+Suggested subjective scoring guide (0 to 5):
 
-1. Open Profile baseline fields (identity/contact + summary).
-2. Update at least one field and save.
-3. Show completion indicator behavior.
-4. Show persisted profile update after reload/navigation.
+1. `0-1`: unclear explanations; weak technical understanding.
+2. `2-3`: acceptable understanding with partial depth.
+3. `4-5`: clear, accurate, evidence-backed technical reasoning.
 
-### A4. Settings Baseline (1 minute)
+## 8. Fast Grading Summary
 
-Required actions:
-
-1. Open Settings page.
-2. Show baseline structure and consistency with app shell/navigation.
-
----
-
-## Phase B - Technical Evidence and Instructor Q&A (7 minutes)
-
-This section is instructor-led. Team answers concise, technical questions with evidence.
-
-### B1. Ownership and Security Evidence (2 minutes)
-
-Required evidence:
-
-1. Show that User B cannot view or modify User A data.
-2. Show one backend ownership enforcement point (route/service/guard).
-
-Acceptable demonstration pattern:
-
-1. Login as User A and show one owned record ID (job, profile segment, or document).
-2. Login as User B and attempt to access that record.
-3. Show deny behavior (`403` or resource-not-found ownership deny pattern).
-4. Show the backend enforcement point in code (middleware, guard, policy, or service check).
-5. Show one unit test that asserts ownership denial.
-
-### B2. CI and Unit Testing Evidence (3 minutes)
-
-Required evidence:
-
-1. Show CI checks running and passing for build + tests.
-2. Show at least one unit test for normal behavior.
-3. Show at least one unit test for non-happy-path behavior (validation/error/unauthorized).
-4. Explain why the non-happy-path test matters.
-
-Note: Phase A remains a happy-path walkthrough. Negative/error handling is demonstrated here in evidence form.
-
-### B3. Architecture and Implementation Q&A (3 minutes)
-
-Instructor may ask any of the following:
-
-1. Why this frontend/backend/database stack?
-2. How are core entities related (User/Profile/Job/etc.)?
-3. How does API structure map to domain resources?
-4. How does your dashboard interaction model stay consistent?
-5. What tradeoff did your team make and why?
-
-"Domain resources" means the primary API nouns representing system data. For this project, examples include:
-
-1. `users`
-2. `profile`
-3. `jobs`
-4. `job-activities`
-5. `documents`
-6. `document-versions`
-7. `job-document-links`
-
-Team should answer briefly and show artifacts only when needed.
-
----
-
-## Sprint 1 Scoring Rubric
-
-Total: 50 points
-
-Project weighting model:
-
-1. Sprint 1: 50 points
-2. Sprint 2: 50 points
-3. Sprint 3: 100 points
-
-### 1) Preparation and Time Discipline (8 points)
-
-1. Setup readiness and start on time (2)
-2. Demo flow preparedness and pacing (3)
-3. Completion within slot (3)
-
-### 2) Product Baseline Delivery (22 points)
-
-1. Authentication baseline complete (7)
-2. Dashboard baseline complete (8)
-3. Profile + Settings baseline complete (7)
-
-### 3) Technical Evidence Quality (15 points)
-
-1. Ownership/isolation proof with two users (6)
-2. CI pipeline evidence (4)
-3. Meaningful unit test evidence (5)
-
-### 4) Architecture Understanding (5 points)
-
-1. Clear explanation of architecture and key decisions (5)
-
----
-
-## Failure Modes and Penalties
-
-1. No ownership/isolation proof: major deduction in Technical Evidence.
-2. CI not available or failing: deduction in Technical Evidence.
-3. Only happy-path test shown: partial credit only for testing criterion.
-4. Demo exceeds slot: remaining items scored as not demonstrated.
+1. Objective checklist subtotal: ____ / 25
+2. Bug/failure penalties (no cap): -____
+3. Subjective Q&A score: +____ / 5
+4. Final score: ____
