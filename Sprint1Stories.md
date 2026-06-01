@@ -12,6 +12,12 @@ Sprint 1 focus: Dashboard foundation, authentication, CI/CD, and profile baselin
 
 Total stories: 23
 
+## How To Read This Sprint Document
+
+1. This file is the authoritative source for Sprint 1 scope.
+2. `README.md` provides the overall product description, but Sprint 1 grading is based on this file.
+3. Features described in the overall product but not listed here are not required for Sprint 1.
+
 ## CI/CD and Testing Requirements (Required)
 
 These requirements apply to all Sprint 1 stories.
@@ -148,7 +154,7 @@ These rules are authoritative for Sprint 1 implementation and grading.
 ## D. Dashboard Foundation and Job Baseline
 
 16. **S1-016 - Build Global App Shell and Navigation**
-    Outcome: App has consistent navigation and page layout for Dashboard, Profile, Document Library, and Settings.
+    Outcome: App has consistent navigation and page layout for the Sprint 1 areas: Dashboard, Profile, and Settings, with a structure that can be extended in later sprints.
     Rules: S1-BR-012
 
 17. **S1-017 - Implement Settings Page Baseline**

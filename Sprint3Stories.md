@@ -12,6 +12,13 @@ Sprint 3 focus: document workflows, company research support, deployment, and fi
 
 Total stories: 22
 
+## How To Read This Sprint Document
+
+1. This file is the authoritative source for Sprint 3 scope.
+2. `README.md` provides the overall product description, but Sprint 3 grading is based on this file.
+3. Working Sprint 1 and Sprint 2 functionality remains in scope unless this document explicitly replaces or extends it.
+4. Sprint 3 emphasizes final integration, hardening, deployment, and coherence across the full product.
+
 ## CI/CD and Testing Requirements (Required)
 
 These requirements are self-contained and mandatory for Sprint 3 delivery.

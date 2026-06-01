@@ -24,6 +24,12 @@ One coherent web app where a user can:
 
 This is a SaaS-style, multi-user web application with self-registration and strict per-user data isolation.
 
+### How To Use This Document
+
+1. `README.md` defines the overall product.
+2. Each sprint story file defines the work required for that sprint.
+3. If there is a conflict between this document and a sprint story file, follow the sprint story file for the currently active sprint.
+
 ## 2. Primary UX Principle
 
 The **Dashboard/Job Board** is the center of gravity.
@@ -38,6 +44,8 @@ Profile supports those workflows. Document management is important, but secondar
 2. User Profile (canonical personal/professional data).
 3. Document workflows (job-context first; expanded global management in Sprint 3).
 4. Settings and account controls.
+
+For Sprint 1, students should focus only on the Sprint 1 slice of this product. Not every product area is fully implemented in Sprint 1.
 
 ## 4. Functional Requirements
 
@@ -151,6 +159,8 @@ Validation rules include:
 2. User can link/unlink documents from job detail with cardinality constraints enforced.
 3. Document operations respect per-user ownership.
 
+Document handling is part of the overall product, but the full global document-management experience is not part of Sprint 1 delivery.
+
 ## 4.5 AI Features
 
 Allowed AI usage:
@@ -244,12 +254,15 @@ Themes:
 2. Sprint 2: Job Posts and Workflow
 3. Sprint 3: Document Handling and Cloud Deployment
 
+For the first two weeks, students should use `README.md` together with `Sprint1Stories.md` as the authoritative reference set.
+
 ## 9. Student Execution Guidance
 
 1. Treat each sprint story file as authoritative for that sprint.
 2. Use canonical business rule IDs in the sprint file when implementing and testing stories.
 3. Keep Jira tickets one-to-one with stories.
 4. Provide explicit test evidence for each completed story.
+5. Do not implement later-sprint features early unless explicitly approved.
 
 ## 10. Definition of Done (Project Level)
 

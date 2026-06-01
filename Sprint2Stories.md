@@ -12,6 +12,13 @@ Sprint 2 focus: Dashboard workflow completion, profile completion, AI job-contex
 
 Total stories: 26
 
+## How To Read This Sprint Document
+
+1. This file is the authoritative source for Sprint 2 scope.
+2. `README.md` provides the overall product description, but Sprint 2 grading is based on this file.
+3. Sprint 1 functionality remains required unless this document explicitly replaces or extends it.
+4. Features described in the overall product but not listed here are not required for Sprint 2.
+
 ## CI/CD and Testing Requirements (Required)
 
 These requirements are self-contained and mandatory for Sprint 2 delivery.
