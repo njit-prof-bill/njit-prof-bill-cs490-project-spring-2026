@@ -12,6 +12,39 @@ Sprint 3 focus: document workflows, company research support, deployment, and fi
 
 Total stories: 22
 
+## CI/CD and Testing Requirements (Required)
+
+These requirements are self-contained and mandatory for Sprint 3 delivery.
+
+### Carry-Forward Requirements from Sprint 1 and Sprint 2
+
+1. Every pull request must run lint, build, unit tests, and Sprint 2 coverage gates.
+2. A pull request with any failing check cannot be merged.
+3. Every story must include automated test updates with happy-path and non-happy-path coverage.
+4. Ownership, authorization, and validation protections must remain covered by regression tests.
+
+### Sprint 3 Ratchet Requirements
+
+1. CI/CD pipeline must include deployment steps and post-deploy health checks.
+2. Add smoke tests for demo-critical user flows after deployment.
+3. Add migration verification checks for production database changes.
+4. Add reliability tests for error-handling paths in document and workflow services.
+5. Add regression tests for document versioning and linking rules.
+
+### Minimum Test Evidence for Sprint 3 Stories
+
+1. One test for expected behavior of the story outcome.
+2. One test for failure/edge behavior.
+3. One test that protects against regression in a previously delivered feature.
+4. Deployment-related stories must include CI/CD evidence and at least one post-deploy verification artifact.
+
+### Definition of Done Additions
+
+1. Story outcome works in running app.
+2. Story tests pass locally and in CI.
+3. Story satisfies Sprint 3 CI/CD gates, including deployment and smoke-check expectations.
+4. Pull request includes a "test evidence" section with links or artifacts for deployment verification where applicable.
+
 ---
 
 ## A. Document Library Implementation

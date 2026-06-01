@@ -12,6 +12,38 @@ Sprint 2 focus: Dashboard workflow completion, profile completion, AI job-contex
 
 Total stories: 26
 
+## CI/CD and Testing Requirements (Required)
+
+These requirements are self-contained and mandatory for Sprint 2 delivery.
+
+### Carry-Forward Requirements from Sprint 1
+
+1. Every pull request must run lint, build, and unit tests.
+2. A pull request with any failing check cannot be merged.
+3. Every story must include test updates with happy-path and non-happy-path coverage.
+4. Auth, validation, and ownership behaviors must continue to have automated negative-path tests.
+
+### Sprint 2 Ratchet Requirements
+
+1. Add CI coverage enforcement for changed files or changed modules.
+2. Add integration tests for critical workflow paths in dashboard/job detail logic.
+3. Require workflow integrity tests for stage changes and timeline event propagation.
+4. Require profile completion logic tests for boundary and edge cases.
+5. Require API tests that verify per-user ownership constraints still hold after workflow updates.
+
+### Minimum Test Evidence for Workflow Stories
+
+1. One test proving expected forward workflow behavior.
+2. One test proving invalid transition/invalid input handling.
+3. One test proving persisted state is reflected in dependent views or metrics.
+
+### Definition of Done Additions
+
+1. Story outcome works in running app.
+2. Story tests pass locally and in CI.
+3. Story meets Sprint 2 coverage gate in CI.
+4. Pull request includes a "test evidence" section describing workflow and negative-path tests.
+
 ---
 
 ## A. Dashboard Core Workflow Completion

@@ -12,6 +12,36 @@ Sprint 1 focus: Dashboard foundation, authentication, CI/CD, and profile baselin
 
 Total stories: 23
 
+## CI/CD and Testing Requirements (Required)
+
+These requirements apply to all Sprint 1 stories.
+
+### CI/CD Baseline Gate
+
+1. Every pull request must run lint, build, and unit tests.
+2. A pull request with any failing check cannot be merged.
+3. CI output must be visible to reviewers before merge.
+
+### Test Baseline Expectations
+
+1. Every story must include at least one automated test update (new test or updated existing test).
+2. Authentication and authorization stories must include negative-path tests.
+3. Validation stories must include field-level error assertions.
+4. Ownership rules must be tested to prove cross-user access is denied.
+
+### Minimum Test Evidence by Story Type
+
+1. Happy-path behavior test.
+2. At least one non-happy-path test (validation, unauthorized, or failure handling).
+3. Persistence check where data is created or updated.
+
+### Definition of Done Additions
+
+1. Story outcome works in running app.
+2. Required tests pass locally and in CI.
+3. Story does not reduce existing test coverage in touched modules.
+4. Pull request description includes a short "test evidence" section.
+
 ---
 
 ## A. AI Context Documents (required before feature coding)
