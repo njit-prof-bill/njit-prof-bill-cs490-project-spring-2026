@@ -42,6 +42,41 @@ These requirements apply to all Sprint 1 stories.
 3. Story does not reduce existing test coverage in touched modules.
 4. Pull request description includes a short "test evidence" section.
 
+## Canonical Business Rules (Sprint 1)
+
+These rules are authoritative for Sprint 1 implementation and grading.
+
+### S1-BR Authentication and Access
+
+1. **S1-BR-001**: User authentication is required for all protected application routes.
+2. **S1-BR-002**: Unauthenticated access to protected routes must be denied by backend checks.
+3. **S1-BR-003**: User registration must prevent duplicate email accounts.
+4. **S1-BR-004**: Password reset must require secure user verification before password update.
+5. **S1-BR-005**: Session invalidation on logout must block subsequent protected API access.
+
+### S1-BR Data Ownership and Security
+
+1. **S1-BR-006**: All user-scoped records must be isolated by owner identity.
+2. **S1-BR-007**: Cross-user read/write attempts must be denied.
+3. **S1-BR-008**: Ownership enforcement must be implemented server-side (frontend checks are not sufficient).
+
+### S1-BR Profile Baseline
+
+1. **S1-BR-009**: Identity/contact and summary fields form the Sprint 1 profile baseline.
+2. **S1-BR-010**: Profile updates must persist across refresh and new sessions.
+3. **S1-BR-011**: Profile completion indicator must reflect baseline required fields only.
+
+### S1-BR Dashboard Baseline
+
+1. **S1-BR-012**: Dashboard is the home page and baseline job workspace.
+2. **S1-BR-013**: Users can create and edit baseline job records with persistence.
+3. **S1-BR-014**: Baseline job card must display at least title, company, stage, and last activity.
+
+### Rule Usage in Stories and Jira
+
+1. Any Sprint 1 story may reference one or more S1-BR IDs instead of repeating rule text.
+2. If story behavior conflicts with a canonical rule, the canonical rule prevails.
+
 ---
 
 ## A. AI Context Documents (required before feature coding)

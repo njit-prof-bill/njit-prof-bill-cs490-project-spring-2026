@@ -45,6 +45,53 @@ These requirements are self-contained and mandatory for Sprint 3 delivery.
 3. Story satisfies Sprint 3 CI/CD gates, including deployment and smoke-check expectations.
 4. Pull request includes a "test evidence" section with links or artifacts for deployment verification where applicable.
 
+## Canonical Business Rules (Sprint 3)
+
+These rules are authoritative for Sprint 3 implementation and grading.
+
+### S3-BR Document Domain Scope
+
+1. **S3-BR-001**: Supported document business types are resume and cover letter only.
+2. **S3-BR-002**: Document ownership must remain user-scoped and isolated.
+3. **S3-BR-003**: Document actions must preserve audit-friendly timestamps.
+
+### S3-BR Document Format and File Handling
+
+1. **S3-BR-004**: Supported upload formats are PDF, DOCX, and TXT.
+2. **S3-BR-005**: Unsupported formats must be rejected with clear validation messages.
+3. **S3-BR-006**: Export/download must support defined output formats for user documents.
+
+### S3-BR Versioning and History
+
+1. **S3-BR-007**: New document versions are created only by explicit version-creation actions.
+2. **S3-BR-008**: Version history must capture version label/number, timestamp, and ownership metadata.
+3. **S3-BR-009**: Archive/restore must preserve version history.
+
+### S3-BR Job-Document Relationship
+
+1. **S3-BR-010**: A job can be linked to at most one resume and at most one cover letter at a time.
+2. **S3-BR-011**: Replacing a currently linked document must require confirmation.
+3. **S3-BR-012**: Link changes must preserve referential integrity and ownership checks.
+
+### S3-BR Analytics Definitions
+
+1. **S3-BR-013**: Velocity equals the number of Interested -> Applied transitions in a rolling 7-day window.
+2. **S3-BR-014**: Stage conversion equals Applied -> Interview conversion within 14 days using persisted timestamps.
+3. **S3-BR-015**: Analytics must be computed from backend persisted events, not transient UI state.
+
+### S3-BR Deployment and Reliability
+
+1. **S3-BR-016**: Main-branch deployment must be automated through CI/CD pipeline execution.
+2. **S3-BR-017**: Deployment must include post-deploy health checks.
+3. **S3-BR-018**: Production database changes must use versioned migration workflow.
+4. **S3-BR-019**: Centralized error handling/logging must exist for server-side failures.
+5. **S3-BR-020**: Demo-critical flows must be covered by smoke-test verification before release/demo.
+
+### Rule Usage in Stories and Jira
+
+1. Any Sprint 3 story may reference one or more S3-BR IDs instead of repeating rule text.
+2. If story behavior conflicts with a canonical rule, the canonical rule prevails.
+
 ---
 
 ## A. Document Library Implementation

@@ -44,6 +44,60 @@ These requirements are self-contained and mandatory for Sprint 2 delivery.
 3. Story meets Sprint 2 coverage gate in CI.
 4. Pull request includes a "test evidence" section describing workflow and negative-path tests.
 
+## Canonical Business Rules (Sprint 2)
+
+These rules are authoritative for Sprint 2 implementation and grading.
+
+### S2-BR Job Posting and Core Job Data
+
+1. **S2-BR-001**: A job must include company, title, and full job posting body.
+2. **S2-BR-002**: Job posting body is required at job creation time.
+3. **S2-BR-003**: Job posting body must be editable after creation.
+
+### S2-BR Campaign Workflow and Stage Rules
+
+1. **S2-BR-004**: Canonical stages are Interested, Applied, Interview, Offer, Rejected, and Archived.
+2. **S2-BR-005**: Allowed forward transitions are:
+   - Interested -> Applied or Rejected
+   - Applied -> Interview or Rejected
+   - Interview -> Offer or Rejected
+   - Offer -> Archived or Rejected
+3. **S2-BR-006**: Archived is terminal for normal flow.
+4. **S2-BR-007**: Non-forward transitions require warning and explicit user confirmation.
+5. **S2-BR-008**: Confirmed override transitions must be logged with timestamp and user identity.
+6. **S2-BR-009**: Stage transitions must persist timestamped history for timeline and analytics.
+
+### S2-BR Interview and Activity Rules
+
+1. **S2-BR-010**: A job may have multiple interview entries while in Interview stage.
+2. **S2-BR-011**: Interview entries require round type, date/time, and notes.
+3. **S2-BR-012**: Follow-up/reminder events must be tied to a specific job.
+4. **S2-BR-013**: Timeline must reflect stage changes and activity events in chronological order.
+
+### S2-BR Profile Completion and Validation
+
+1. **S2-BR-014**: Profile sections Experience, Education, Skills, and Preferences must support CRUD.
+2. **S2-BR-015**: End date cannot be earlier than corresponding start date for dated entries.
+3. **S2-BR-016**: Duplicate skills are not allowed within a single user profile.
+4. **S2-BR-017**: Section-level save must return clear field-level validation errors.
+
+### S2-BR AI and Job-Context Document Rules
+
+1. **S2-BR-018**: AI drafting must be triggered by explicit user action.
+2. **S2-BR-019**: AI resume and cover letter drafts must use profile plus job context inputs.
+3. **S2-BR-020**: Generated output is editable before save.
+4. **S2-BR-021**: Job-context save operations must preserve ownership boundaries.
+
+### S2-BR Metrics Definitions
+
+1. **S2-BR-022**: Baseline dashboard metrics in Sprint 2 are stage counts and response tracking only.
+2. **S2-BR-023**: Metric values must be computed from persisted job and event records, not UI-only state.
+
+### Rule Usage in Stories and Jira
+
+1. Any Sprint 2 story may reference one or more S2-BR IDs instead of repeating rule text.
+2. If story behavior conflicts with a canonical rule, the canonical rule prevails.
+
 ---
 
 ## A. Dashboard Core Workflow Completion
