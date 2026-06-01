@@ -98,70 +98,92 @@ These rules are authoritative for Sprint 3 implementation and grading.
 
 1. **S3-001 - Implement Document Library List View**
    Outcome: Users can view all their documents in a global library.
+   Rules: S3-BR-001, S3-BR-002
 
 2. **S3-002 - Implement Document Metadata Model and Persistence**
    Outcome: Documents support title, type, status, tags, ownership, and timestamps.
+   Rules: S3-BR-001, S3-BR-002, S3-BR-003
 
 3. **S3-003 - Implement Document Version Model and Persistence**
    Outcome: Documents support version history with version metadata.
+   Rules: S3-BR-007, S3-BR-008
 
 4. **S3-004 - Implement Document Upload Workflow**
    Outcome: Users can upload supported document files, validate file constraints, and store them in library records.
+   Rules: S3-BR-001, S3-BR-004, S3-BR-005
 
 5. **S3-005 - Implement Document Download/Export Workflow**
    Outcome: Users can download/export selected document versions from library and job context views.
+   Rules: S3-BR-006
 
 6. **S3-006 - Implement Library Filtering and Sorting**
    Outcome: Users can filter/sort by type, status, tag, and updated date.
+   Rules: S3-BR-001
 
 7. **S3-007 - Implement Document Duplicate and Rename Actions**
    Outcome: Users can duplicate existing artifacts and rename cleanly.
+   Rules: S3-BR-007, S3-BR-008
 
 8. **S3-008 - Implement Archive and Restore for Documents**
    Outcome: Users can archive and restore documents without hard deletion.
+   Rules: S3-BR-009
 
 9. **S3-009 - Implement Job-to-Library Linking UX**
    Outcome: Job detail allows linking/unlinking library documents to applications.
+   Rules: S3-BR-010, S3-BR-011, S3-BR-012
 
 10. **S3-010 - Implement Library Visibility in Job Detail Context**
     Outcome: Job detail displays linked documents and relevant versions clearly.
+    Rules: S3-BR-010, S3-BR-012
 
 ## B. Company Research and Advanced Workflow Support
 
 11. **S3-011 - Implement Company Research Input and Prompt UX in Job Detail**
     Outcome: Users can trigger AI-assisted company research from job detail using user-provided context.
+    Rules: S3-BR-002
 
 12. **S3-012 - Persist Company Research Notes to Job Record**
     Outcome: Research output is saved as editable notes tied to the job.
+    Rules: S3-BR-002, S3-BR-003
 
 13. **S3-013 - Add Interview Preparation Notes Section in Job Detail**
     Outcome: Users can maintain structured prep notes for interviews.
+    Rules: S3-BR-003
 
 14. **S3-014 - Expand Dashboard Analytics (Velocity and Stage Conversion)**
     Outcome: Dashboard includes conversion and time-in-stage analytics from stored events.
+    Rules: S3-BR-013, S3-BR-014, S3-BR-015
 
 ## C. Deployment, Reliability, and Final Quality
 
 15. **S3-015 - Provision Cloud Runtime for Frontend and Backend**
     Outcome: App is deployed to cloud with public URL and documented environment setup.
+    Rules: S3-BR-016, S3-BR-017
 
 16. **S3-016 - Configure Production Database and Migrations**
     Outcome: Production data store is provisioned with migration strategy and rollback plan.
+    Rules: S3-BR-018
 
 17. **S3-017 - Configure CI/CD Deployment Pipeline**
     Outcome: Merge to main triggers production deployment with health checks.
+    Rules: S3-BR-016, S3-BR-017
 
 18. **S3-018 - Implement Centralized Error Handling and Logging**
     Outcome: Server/client errors are captured consistently with actionable context.
+    Rules: S3-BR-019
 
 19. **S3-019 - Implement Performance and Accessibility Pass**
     Outcome: Team executes and documents fixes for major performance/accessibility issues.
+    Rules: S3-BR-019, S3-BR-020
 
 20. **S3-020 - Expand Unit Test Coverage for Security and Ownership Rules**
     Outcome: Critical authorization and ownership enforcement paths are unit-tested.
+    Rules: S3-BR-002
 
 21. **S3-021 - Expand Unit Test Coverage for Document Logic**
     Outcome: Document versioning, archive/restore, upload/download, and job-link ownership rules are unit-tested.
+    Rules: S3-BR-001, S3-BR-007, S3-BR-009, S3-BR-010, S3-BR-012
 
 22. **S3-022 - Final Release Readiness and Demo Hardening**
     Outcome: Team completes release checklist, smoke tests, and demo stabilization.
+    Rules: S3-BR-016, S3-BR-017, S3-BR-020

@@ -104,84 +104,110 @@ These rules are authoritative for Sprint 2 implementation and grading.
 
 1. **S2-001 - Implement Job Search Across Dashboard**
    Outcome: Users can search jobs by title/company/keywords with immediate result updates.
+   Rules: S2-BR-001, S2-BR-003
 
 2. **S2-002 - Implement Job Filter Controls**
    Outcome: Users can filter by stage, location, and deadline state.
+   Rules: S2-BR-004
 
 3. **S2-003 - Implement Job Sorting Controls**
    Outcome: Users can sort by last activity, deadline, company, and created date.
+   Rules: S2-BR-004
 
 4. **S2-004 - Implement Stage/Status Indicators on Job Cards**
    Outcome: Cards clearly display current stage and urgency cues.
+   Rules: S2-BR-004, S2-BR-005
 
 5. **S2-005 - Implement Job Card to Job Detail Expansion Pattern**
    Outcome: Every job card opens to a consistent job detail UI pattern.
+   Rules: S2-BR-004, S2-BR-013
 
 6. **S2-006 - Implement Job Detail Overview Section**
    Outcome: Users can edit core job data in a dedicated overview panel.
+   Rules: S2-BR-001, S2-BR-003
 
 7. **S2-007 - Implement Job Deadline and Recruiter/Contact Notes Fields**
    Outcome: Job detail supports deadline field and recruiter/contact notes with persistence and edit support.
+   Rules: S2-BR-001, S2-BR-003, S2-BR-017
 
 8. **S2-008 - Implement Pipeline Stage Transition Controls**
    Outcome: Users can change stage from detail view and dashboard controls.
+   Rules: S2-BR-004, S2-BR-005, S2-BR-007, S2-BR-008
 
 9. **S2-009 - Persist Stage Transition Timestamps**
    Outcome: Stage changes are recorded with timestamps for timeline and analytics use.
+   Rules: S2-BR-009
 
 10. **S2-010 - Implement Job Activity Timeline**
     Outcome: Timeline displays key events (applied, follow-up, interview, outcome).
+    Rules: S2-BR-009, S2-BR-013
 
 11. **S2-011 - Implement Interview Tracking in Job Detail**
     Outcome: Users can add/edit interview events with round type, date/time, and notes.
+    Rules: S2-BR-010, S2-BR-011
 
 12. **S2-012 - Implement Follow-Up and Reminder Tracking**
     Outcome: Users can create and manage follow-up tasks/reminders tied to a job.
+    Rules: S2-BR-012, S2-BR-013
 
 13. **S2-013 - Implement Outcome Tracking Controls**
     Outcome: Users can record final outcome states and notes for each job.
+    Rules: S2-BR-004, S2-BR-005
 
 14. **S2-014 - Implement Job Archive and Restore Workflow**
     Outcome: Users can archive and restore jobs while preserving full history and linked records.
+    Rules: S2-BR-006, S2-BR-009
 
 15. **S2-015 - Implement Job Delete Workflow**
     Outcome: Users can delete jobs through a guarded workflow (confirmation and ownership checks).
+    Rules: S2-BR-021
 
 ## B. Profile Completion
 
 16. **S2-016 - Implement Experience Section CRUD**
     Outcome: Users can add/edit/delete/reorder employment and project entries.
+    Rules: S2-BR-014, S2-BR-015, S2-BR-017
 
 17. **S2-017 - Implement Education Section CRUD**
     Outcome: Users can add/edit/delete education records with full required fields.
+    Rules: S2-BR-014, S2-BR-015, S2-BR-017
 
 18. **S2-018 - Implement Skills Section CRUD**
     Outcome: Users can add/edit/delete/reorder skills with optional category/proficiency.
+    Rules: S2-BR-014, S2-BR-016, S2-BR-017
 
 19. **S2-019 - Implement Career Preferences Section CRUD**
     Outcome: Users can maintain target roles, location preferences, work mode, and salary preference.
+    Rules: S2-BR-014, S2-BR-017
 
 20. **S2-020 - Implement Section-Level Save/Validation UX for Profile**
     Outcome: Each profile section saves independently with clear validation feedback.
+    Rules: S2-BR-014, S2-BR-015, S2-BR-016, S2-BR-017
 
 ## C. AI-Powered Job Context Workflows
 
 21. **S2-021 - Implement AI Resume Draft from Profile + Job Context**
     Outcome: Users can generate a resume draft from job detail using profile data and job data.
+    Rules: S2-BR-018, S2-BR-019, S2-BR-020
 
 22. **S2-022 - Implement AI Cover Letter Draft from Profile + Job Context**
     Outcome: Users can generate a cover letter draft from job detail using profile and job context.
+    Rules: S2-BR-018, S2-BR-019, S2-BR-020
 
 23. **S2-023 - Implement AI Rewrite/Improve Actions for Draft Content**
     Outcome: Users can request AI rewrites/improvements and compare before saving.
+    Rules: S2-BR-018, S2-BR-020
 
 24. **S2-024 - Implement Document Save from Job Context**
     Outcome: Generated/edited drafts can be saved as document records linked to job context.
+    Rules: S2-BR-021
 
 ## D. Dashboard Metrics and Quality
 
 25. **S2-025 - Implement Dashboard Metrics (Stage Counts and Response Tracking)**
     Outcome: Dashboard displays baseline metrics computed from stored job/outcome data.
+    Rules: S2-BR-022, S2-BR-023
 
 26. **S2-026 - Add Unit Tests for Job Workflow and Profile Completion Logic**
     Outcome: Core domain logic for stage transitions, timeline events, and profile completeness is unit-tested.
+    Rules: S2-BR-009, S2-BR-014, S2-BR-017, S2-BR-022, S2-BR-023
