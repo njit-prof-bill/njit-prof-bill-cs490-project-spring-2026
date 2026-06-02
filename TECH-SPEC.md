@@ -1,6 +1,6 @@
 # ATS for Candidates - Technical Specifications (Spring 2026)
 
-This document defines how teams will build the product described in `ATS-PRD.md` and experienced through `UX.md`. The PRD tells us what to build. This document tells us how to build it consistently, safely, and at production quality.
+This document defines engineering standards for building the product described in `README.md` and experienced through `UX.md`. It focuses on consistent implementation quality, safety, and delivery discipline.
 
 This is a project-level technical specification. Teams will apply it incrementally by sprint through Jira stories.
 
@@ -8,12 +8,12 @@ This is a project-level technical specification. Teams will apply it incremental
 
 Use the documents in this order:
 
-1. `ATS-PRD.md` for product scope and acceptance expectations.
-2. `UX.md` for user experience direction.
-3. `TECH-SPEC.md` for implementation standards and engineering guardrails.
-4. Sprint backlog stories for execution slices.
+1. Active sprint story file (`Sprint1Stories.md`, `Sprint2Stories.md`, or `Sprint3Stories.md`) for required sprint scope and grading expectations.
+2. `README.md` for overall product scope and cross-sprint direction.
+3. `UX.md` for user experience direction.
+4. `TECH-SPEC.md` for implementation standards and engineering guardrails.
 
-If there is a conflict between implementation convenience and product requirements, follow the PRD and UX guidance.
+If there is a conflict, follow the active sprint story file for implementation scope and grading, then `README.md` for product intent.
 
 ## 2. Architecture and Service Model
 
@@ -40,10 +40,12 @@ The application is a multi-user SaaS web platform with self-registration.
 
 Minimum architecture must include:
 
-1. Frontend application for Dashboard, Profile, Document Library, and Settings.
+1. Frontend application for Dashboard, Profile, and Settings, with an extensible structure for later document workflow expansion.
 2. Backend API layer for authentication, authorization, and domain workflows.
 3. Persistent database for user-scoped domain records.
 4. File/object storage or equivalent mechanism for document upload/download workflows.
+
+Note on phased delivery: full global document-management UI may be delivered in later sprints. Early sprints can keep document actions primarily in job-context flows.
 
 The app should be designed around domain boundaries, not around pages. At minimum, keep boundaries for:
 
@@ -219,22 +221,24 @@ Jira stories are execution units. This document is the standards contract.
 Required traceability practice:
 
 1. Each story references relevant Tech Spec sections in its description.
-2. Story Definition of Done includes test and ownership checks.
-3. Pull requests reference both story ID and impacted Tech Spec sections.
+2. Each story references applicable canonical business rule IDs from the active sprint story file.
+3. Story Definition of Done includes test and ownership checks.
+4. Pull requests reference both story ID and impacted Tech Spec sections.
 
 Suggested Jira custom fields:
 
 1. `Tech Spec Sections`
 2. `Test Evidence`
 3. `Security/Ownership Impact`
+4. `Canonical Rule IDs`
 
 ## 12. Sprint Application Guidance
 
 This is a project-level spec, but use it sprint by sprint:
 
-1. Sprint 1: enforce standards for auth, ownership, CI, and dashboard/profile baseline.
-2. Sprint 2: enforce standards for dashboard workflow depth, AI job-context features, and profile completion.
-3. Sprint 3: enforce standards for document library robustness, deployment quality, and hardening.
+1. Sprint 1: enforce standards for authentication, ownership, CI baseline, and profile/dashboard foundation.
+2. Sprint 2: enforce standards for job campaign workflow, profile completion, AI job-context features, and workflow-integrity testing.
+3. Sprint 3: enforce standards for document handling robustness, analytics correctness, deployment quality, and hardening.
 
 ## 13. Final Engineering Standard
 

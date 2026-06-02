@@ -2,6 +2,13 @@
 
 This document explains how to design the user experience designed for this project. It is not a component checklist and it is not a design template. Teams still have room to make design decisions, but those decisions need to produce one coherent application from beginning to end.
 
+## How To Use This Document
+
+1. This file defines UX standards and consistency expectations.
+2. `README.md` defines the overall product direction.
+3. The active sprint story file (`Sprint1Stories.md`, `Sprint2Stories.md`, or `Sprint3Stories.md`) defines required sprint scope and grading criteria.
+4. If there is a conflict, follow the active sprint story file for implementation scope.
+
 The most important idea is simple: this app should feel like one product, not three sprint submissions stitched together. Users should never feel like they are being pushed between unrelated screens with unrelated design patterns.
 
 ## Product Experience Direction
@@ -16,7 +23,9 @@ Each team may choose its navigation pattern. A top menu is acceptable. A left na
 
 What is not acceptable is switching navigation paradigms inside the same application. If the app starts with one approach, that approach should remain consistent across all major screens and workflows.
 
-No matter which layout you choose, the primary destinations must remain clear and predictable: Dashboard, Profile, Document Library, and Settings. The user should not need to relearn navigation when moving between sections.
+No matter which layout you choose, major destinations should remain clear and predictable for the full product: Dashboard, Profile, Settings, and document workflows. The user should not need to relearn navigation when moving between sections.
+
+Note for phased delivery: Sprint 1 and Sprint 2 may not expose every final destination as a primary navigation item. Follow the active sprint story file for required destinations in that sprint.
 
 ## Dashboard and Job Board UX
 
@@ -34,7 +43,7 @@ This area should feel clean and practical, more like a professional account prof
 
 ## Document Library Experience
 
-The Document Library is a global management view. It should provide a clear overview of resumes and cover letters, including version labels, status, and organization affordances.
+Document workflows are part of the full product scope and are expected to mature in later sprints. In early sprints, document work may be primarily job-context actions. In later sprints, teams should provide a clear global management view of resumes and cover letters, including version labels, status, and organization affordances.
 
 The library is important, but it is not the center of daily activity. It should support the dashboard workflow rather than compete with it.
 
