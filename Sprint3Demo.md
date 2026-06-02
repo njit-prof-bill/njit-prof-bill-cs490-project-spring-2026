@@ -1,209 +1,135 @@
-# Sprint 3 Demo Script (Spring 2026)
+# Sprint 3 Demo Script and Grading Checklist (Spring 2026)
 
 _ATS for Candidates - CS 490 Capstone_
 
-## Demo Intent
+## 1. Purpose
 
-Sprint 3 demo has two goals:
+This is a single source of truth for Sprint 3 demo execution and grading.
 
-1. Verify that each team delivered Sprint 3 outcomes for document workflows, company research, analytics expansion, and production readiness.
-2. Showcase product maturity through polished UI/UX flows, continuity, and confidence.
+It combines:
 
-This is primarily a product experience demo. Technical discussion should be concise and only used as supporting evidence.
+1. The live demo script teams must follow.
+2. The objective grading checklist used during the demo.
+3. The penalty model.
+4. The separate subjective Q&A scoring section.
 
-## Demo Start Protocol
+## 2. Timing and Structure
 
-At the start of each team presentation:
+Per team:
 
-1. The professor opens the team application on the professor device using the team's deployed URL.
-2. After the app is confirmed running, the team may continue the presentation from any team device that is ready.
-3. If the team does not have a deployed web app, the professor will randomly choose one team member device as the required presentation device for that team.
+1. **15 minutes**: setup and live demo run.
+2. **5 minutes**: instructor Q&A.
 
-Teams should be ready to provide the deployed URL immediately when called.
+Total: **20 minutes**.
 
-## Class Timing Model
+## 3. Scoring Model
 
-There are several teams and a fixed class demo window. Each team has a strict 15-minute presentation slot, with a 5-minute setup/transition allocation outside team presentation time.
+### 3.1 Objective Checklist Score
 
-### Per-Team Timebox (15 minutes presentation time)
+1. There are **25 checklist items**.
+2. Each item is binary: `1` (demonstrated) or `0` (not demonstrated).
+3. Objective subtotal = sum of 25 checklist items.
 
-1. **Phase A - Scripted Product Demo (UI/UX Focus)**: 12 minutes
-2. **Phase B - Lightweight Evidence and Q&A**: 3 minutes
+### 3.2 Demo Bug/Fault Penalty (No Cap)
 
-### Setup/Transition Allocation (5 minutes each)
+1. Teams lose **1 point for each confirmed bug/failure** exposed during the demo.
+2. No cap is applied.
 
-This 5-minute allocation is used:
+Confirmed bug/failure means any of the following:
 
-1. Before the first team begins.
-2. Between team presentations for projector/device transition.
+1. Crash, unhandled runtime error, or broken flow during a required checklist step.
+2. Behavior that clearly contradicts the listed Sprint 3 requirement being demonstrated.
+3. Required evidence unavailable when requested (for example, required CI/CD artifact cannot be shown).
 
-Suggested sequence per team block:
+### 3.3 Subjective Q&A Score
 
-1. **Transition/Setup**: 5 minutes
-2. **Phase A - Scripted Product Demo (UI/UX Focus)**: 12 minutes
-3. **Phase B - Lightweight Evidence and Q&A**: 3 minutes
+1. Q&A is the only subjective component.
+2. Suggested Q&A score range: 0 to 5.
 
-## Time Enforcement Rules
+### 3.4 Recommended Total
 
-1. Team presentation clock starts when the 15-minute presentation slot begins.
-2. Setup/transition is limited to the 5-minute allocation outside presentation time.
-3. Missing evidence is scored as missing; extra time is not granted.
-4. One presenter should drive the live product; one backup teammate may assist.
+1. Recommended total score = `Objective Checklist (0-25) - Bug Penalties + Q&A (0-5)`.
 
----
+## 4. Required Preparation (Before Demo Day)
 
-## Required Preparation (Before Demo Day)
+Teams must be ready with:
 
-Each team must be ready with:
-
-1. A stable deployed environment (preferred) or stable local runtime with realistic seeded data.
-2. One primary demo user with:
-   - at least 6 to 8 documents across multiple types/statuses/tags
-   - at least 2 jobs linked to documents
-   - at least 1 company research note and 1 interview prep note
-   - enough timeline/events data to show velocity and stage conversion analytics
-3. A second user account to show ownership boundaries when prompted.
-4. A short fallback route (bookmark list or run sheet) in case one screen fails.
+1. Stable deployed environment or reliable local runtime.
+2. One primary demo user with seeded documents across multiple types/statuses/tags.
+3. At least two jobs linked to documents.
+4. One company research note and one interview prep note.
+5. Timeline/events data sufficient to show analytics.
+6. A second user account for ownership checks.
+7. GitHub Actions page ready for deployment and test evidence.
+8. At least three negative unit tests ready to show and explain.
 
 Recommended:
 
 1. Keep a one-page click path with timestamps for each section.
-2. Keep copy/paste snippets ready for quick search terms, tags, and note text.
-3. Pre-open key tabs (Dashboard, Job Detail, Document Library) for fast transitions.
+2. Keep copy/paste snippets ready for search terms, tags, and note text.
+3. Pre-open key tabs (Dashboard, Job Detail, Document Library, Actions) for fast transitions.
 
----
+## 5. Live Demo Script (Tied to Checklist)
 
-## Phase A - Scripted Product Demo (12 minutes)
+Run in this order to match grading flow:
 
-Show required Sprint 3 outcomes as one cohesive candidate journey. Keep emphasis on UI clarity, speed, and interaction quality.
+1. Readiness and deployment data checks: `C01-C04`.
+2. Document workflow checks: `C05-C10`.
+3. Job-context linking and AI note workflows: `C11-C16`.
+4. Analytics and production-readiness checks: `C17-C20`.
+5. GitHub Actions CI, deployment, and test evidence: `C21-C25`.
+6. Instructor Q&A (subjective section).
 
-### A1. Product Framing and Navigation Cohesion (1 minute)
+## 6. Sprint 3 Objective Checklist (25 Items)
 
-Required actions:
+Use this checklist live during demo. Each row is `1` or `0`.
 
-1. Start on Dashboard and state the user goal for the flow (apply, prepare, track, and iterate).
-2. Navigate quickly through Dashboard -> Job Detail -> Document Library.
-3. Highlight consistency of navigation, visual hierarchy, and page-level state feedback.
+| ID | Checklist Item (Yes/No) | Evidence To Observe | Sprint 3 Story Coverage | Score |
+|---|---|---|---|---|
+| C01 | Team is ready to begin on time when called | Demo starts without delay beyond allocated transition/setup | S3-015 to S3-022 |  |
+| C02 | Demo environment is operational at start | Deployed app or stable runtime loads successfully | S3-015, S3-017, S3-022 |  |
+| C03 | Seed data includes a primary demo user with multiple documents | At least 6-8 documents are available for the demo | S3-001 to S3-010 |  |
+| C04 | Second user account exists for ownership checks | Team can switch users for security evidence | S3-002, S3-012, S3-020, S3-021 |  |
+| C05 | Document library list view is available | Global document list is visible and usable | S3-001 |  |
+| C06 | Document metadata displays correctly | Title, type, status, tags, and updated date are visible | S3-002 |  |
+| C07 | Document upload validation works | Supported format uploads succeed and unsupported are rejected | S3-004, S3-005 |  |
+| C08 | Version history is visible and usable | Team can open version metadata/history for a document | S3-003, S3-007, S3-008 |  |
+| C09 | Duplicate and rename workflow works | A document can be duplicated and renamed cleanly | S3-007 |  |
+| C10 | Archive and restore workflow works | Document can be archived and restored without losing history | S3-008, S3-009 |  |
+| C11 | Job detail shows linked documents clearly | Linked document section is visible and understandable | S3-009, S3-010 |  |
+| C12 | One resume and one cover letter max are enforced per job (negative/constraint case) | Replacement or duplicate link is blocked/confirmed as required | S3-010, S3-011, S3-012 |  |
+| C13 | Company research can be triggered from job detail | User-provided prompt/context drives research generation | S3-011 |  |
+| C14 | Company research output saves as editable job notes | Research output persists to the job record | S3-012 |  |
+| C15 | Interview prep notes section is usable | Structured notes can be edited and saved | S3-013 |  |
+| C16 | Analytics show velocity and stage conversion | Dashboard metrics reflect persisted events | S3-014 |  |
+| C17 | Analytics are based on stored backend data, not UI-only state | Team can explain source of metric values | S3-014, S3-015 |  |
+| C18 | Deployment checks and health checks are visible in CI/CD evidence | Pipeline includes deployment and health verification | S3-015, S3-017, S3-018 |  |
+| C19 | Centralized error handling/logging evidence is shown | Sanitized error output or logged failure path is visible | S3-018 |  |
+| C20 | Smoke-test or release-readiness evidence is present | Demo-critical flow has verification evidence | S3-020, S3-022 |  |
+| C21 | Team opens GitHub Actions and shows latest relevant workflow run | Actions page is shown live with recent run context | S3-017, S3-018, S3-022 |  |
+| C22 | GitHub Actions evidence shows build + unit test execution | Workflow details clearly include build/test jobs | S3-020, S3-021, S3-022 |  |
+| C23 | Team can show negative unit tests for document/workflow rules | At least one negative test is demonstrated live | S3-007, S3-010, S3-021 |  |
+| C24 | Team can show negative unit tests for deployment/reliability checks | At least one negative test tied to CI/CD or error handling is demonstrated | S3-018, S3-019, S3-022 |  |
+| C25 | Team is prepared to show at least three negative unit tests and explain each | Three negative tests are shown and briefly explained | S3-010, S3-018, S3-021, S3-022 |  |
 
-### A2. Document Library End-to-End Flow (4 minutes)
+## 7. Subjective Q&A (Only Subjective Portion)
 
-Required actions:
+Suggested Q&A prompts:
 
-1. Open global Document Library list and point out document metadata (title, type, status, tags, updated date).
-2. Demonstrate filter and sort controls (at least one filter + one sort).
-3. Upload one supported file and show validation behavior.
-4. Open a document and show version history behavior.
-5. Duplicate and rename one document.
-6. Archive and restore one document.
-7. Download or export a selected version.
-
-Presenter cues:
-
-1. Narrate UX decisions, not backend internals (for example: "We made bulk scanning faster by keeping filters visible and preserving state").
-2. Keep motion crisp: each interaction should visibly confirm success or failure.
-
-### A3. Job Context and Document Linking UX (2 minutes)
-
-Required actions:
-
-1. Open one job detail view.
-2. Link an existing library document to that job.
-3. Unlink and re-link to show control and transparency.
-4. Show linked documents section in job detail with relevant versions visible.
-
-Presenter cues:
-
-1. Emphasize that candidates can work from either context (job-first or library-first) without losing orientation.
-
-### A4. Company Research and Interview Prep Workflow (2 minutes)
-
-Required actions:
-
-1. In Job Detail, trigger company research using user-provided prompt/context.
-2. Show generated research output and immediately persist it as editable notes on the job.
-3. Open interview preparation notes section and show structured editing.
-
-Presenter cues:
-
-1. Focus on how the workflow reduces context switching and keeps preparation artifacts in one place.
-
-### A5. Analytics and "Ready for Production" Experience (2 minutes)
-
-Required actions:
-
-1. Open Dashboard analytics and show velocity + stage conversion views.
-2. Explain one insight a candidate can act on immediately.
-3. Briefly point out production polish elements visible in UX (error states, loading behavior, responsiveness/accessibility cues).
-
-Presenter cues:
-
-1. Keep this user-impact focused: "what decision the user makes next because of this screen."
-
----
-
-## Phase B - Lightweight Evidence and Instructor Q&A (3 minutes)
-
-Keep technical detail concise. Show fast evidence, then return to product framing.
-
-### B1. Deployment and Reliability Evidence (2 minutes)
-
-Required evidence:
-
-1. Show one CI/CD run that includes build/test checks, deployment, and health checks.
-2. Show one example of centralized error logging/handling output (sanitized).
-
-### B2. Concise Q&A (1 minute)
-
-Instructor may ask:
-
-1. How did you keep UX coherent while adding many Sprint 3 workflows?
-2. What was the highest risk area in deployment/hardening and how did you reduce it?
+1. How did you keep the user experience coherent while adding document and deployment workflows?
+2. What was the highest risk area in Sprint 3 and how did you reduce it?
 3. What would you improve next if given one additional sprint?
+4. How did you keep analytics grounded in persisted data?
 
----
+Suggested subjective scoring guide (0 to 5):
 
-## Sprint 3 Scoring Rubric
+1. `0-1`: unclear explanations; weak technical understanding.
+2. `2-3`: acceptable understanding with partial depth.
+3. `4-5`: clear, accurate, evidence-backed technical reasoning.
 
-Total: 100 points
+## 8. Fast Grading Summary
 
-Project weighting model:
-
-1. Sprint 1: 50 points
-2. Sprint 2: 50 points
-3. Sprint 3: 100 points
-
-### 1) Preparation and Time Discipline (10 points)
-
-1. Setup readiness and start on time (3)
-2. Demo flow preparedness and pacing (4)
-3. Completion within slot (3)
-
-### 2) UI/UX Product Walkthrough Quality (45 points)
-
-1. Document Library end-to-end flow clarity (15)
-2. Job-context linking and visibility flow (10)
-3. Company research + interview prep workflow quality (10)
-4. Analytics storytelling and user-decision clarity (10)
-
-### 3) Sprint 3 Feature Coverage and Correctness (30 points)
-
-1. Required Sprint 3 workflows demonstrated without major gaps (20)
-2. Data persistence and state consistency observable in live flow (10)
-
-### 4) Production Readiness Evidence (15 points)
-
-1. Deployment/CI-CD/health check evidence (6)
-2. Reliability and error handling evidence (4)
-3. Build/test evidence quality in CI/CD context (5)
-
----
-
-## Failure Modes and Penalties
-
-1. Missing core Sprint 3 workflow coverage: major deduction in Feature Coverage and Correctness.
-2. Demo devolves into architecture deep-dive with weak product flow: deduction in UI/UX Product Walkthrough Quality.
-3. No CI/CD deployment/health evidence: major deduction in Production Readiness Evidence.
-4. No build/test evidence in CI/CD demonstration: deduction in Production Readiness Evidence.
-5. Demo exceeds slot: remaining items scored as not demonstrated.
-
----
+1. Objective checklist subtotal: ____ / 25
+2. Bug/failure penalties (no cap): -____
+3. Subjective Q&A score: +____ / 5
+4. Final score: ____
