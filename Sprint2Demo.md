@@ -85,37 +85,37 @@ Run in this order to match grading flow:
 
 Use this checklist live during demo. Each row is `1` or `0`.
 
-| ID | Checklist Item (Yes/No) | Evidence To Observe | Sprint 2 Story Coverage | Score |
-|---|---|---|---|---|
-| C01 | Team is ready to begin on time when called | Demo starts without delay beyond allocated transition/setup | S2-001 to S2-026 |  |
-| C02 | Demo environment is operational at start | App loads and is usable before scripted steps begin | S2-001 to S2-026 |  |
-| C03 | Seed data includes multiple jobs spanning stages | At least a few jobs exist across different stages | S2-001 to S2-010 |  |
-| C04 | Seed data includes completed Sprint 1 profile baseline | Identity/contact + summary are already populated | S2-016 to S2-020 |  |
-| C05 | Search works across jobs | Search by title/company/keywords returns expected results | S2-001 |  |
-| C06 | Filter and sort work on the dashboard | Filter and sort each change visible results | S2-002, S2-003 |  |
-| C07 | Stage/status indicators are visible on job cards | Job cards clearly show current stage cues | S2-004 |  |
-| C08 | Job card opens into a consistent job detail view | Card expansion takes user to the same detailed workflow pattern | S2-005 |  |
-| C09 | Job detail overview is editable | Core job fields can be edited in detail view | S2-006, S2-007 |  |
-| C10 | Dashboard/job workflow updates persist after refresh | Updated job remains after reload/navigation | S2-006 to S2-009 |  |
-| C11 | Stage transition works for valid forward move | Team demonstrates a legal stage change | S2-008, S2-009 |  |
-| C12 | Invalid stage transition is blocked with clear feedback (negative) | Team shows a blocked transition and warning/confirmation behavior | S2-004 to S2-009 |  |
-| C13 | Timeline reflects stage changes and activity entries | Timeline updates after stage/activity changes | S2-009, S2-010, S2-012, S2-013 |  |
-| C14 | Interview entries can be added with round/date/notes | Interview data is stored and visible | S2-010, S2-011 |  |
-| C15 | Follow-up/reminder tracking works | Follow-up item is created and visible for the job | S2-012 |  |
-| C16 | Outcome tracking works | User can record or update outcome state | S2-013 |  |
-| C17 | Profile sections beyond Sprint 1 are present | Experience, Education, Skills, and Preferences are visible | S2-014, S2-016 to S2-020 |  |
-| C18 | Profile validation failure shows clear field-level feedback (negative) | Example invalid entry is rejected with useful error text | S2-015 to S2-017 |  |
-| C19 | Duplicate skill prevention works (negative) | Duplicate skill entry is blocked | S2-016 to S2-020 |  |
-| C20 | AI resume draft can be generated from profile + job context | Draft is produced from the current job detail | S2-018, S2-019, S2-021 |  |
-| C21 | AI cover letter draft can be generated and rewritten | Draft is created and at least one improve action is shown | S2-018, S2-019, S2-022, S2-023 |  |
-| C22 | Generated output can be saved back into job context | AI draft is saved and linked to the job | S2-019, S2-020, S2-024 |  |
-| C23 | Team opens GitHub Actions and shows latest relevant workflow run | Actions page is shown live with recent run context | S2-026 |  |
-| C24 | GitHub Actions evidence shows build + unit test execution | Workflow details clearly include build/test jobs | S2-026 |  |
-| C25 | Team is prepared to show at least three negative unit tests and explain each | Three negative tests are shown and briefly explained | S2-008, S2-015, S2-017, S2-026 |  |
+| ID  | Checklist Item (Yes/No)                                                      | Evidence To Observe                                               | Sprint 2 Story Coverage        | Score |
+| --- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------- | ------------------------------ | ----- |
+| C01 | Team is ready to begin on time when called                                   | Demo starts without delay beyond allocated transition/setup       | S2-001 to S2-026               |       |
+| C02 | Demo environment is operational at start                                     | App loads and is usable before scripted steps begin               | S2-001 to S2-026               |       |
+| C03 | Seed data includes multiple jobs spanning stages                             | At least a few jobs exist across different stages                 | S2-001 to S2-010               |       |
+| C04 | Seed data includes completed Sprint 1 profile baseline                       | Identity/contact + summary are already populated                  | S2-016 to S2-020               |       |
+| C05 | Search works across jobs                                                     | Search by title/company/keywords returns expected results         | S2-001                         |       |
+| C06 | Filter and sort work on the dashboard                                        | Filter and sort each change visible results                       | S2-002, S2-003                 |       |
+| C07 | Stage/status indicators are visible on job cards                             | Job cards clearly show current stage cues                         | S2-004                         |       |
+| C08 | Job card opens into a consistent job detail view                             | Card expansion takes user to the same detailed workflow pattern   | S2-005                         |       |
+| C09 | Job detail overview is editable                                              | Core job fields can be edited in detail view                      | S2-006, S2-007                 |       |
+| C10 | Dashboard/job workflow updates persist after refresh                         | Updated job remains after reload/navigation                       | S2-006 to S2-009               |       |
+| C11 | Stage transition works for valid forward move                                | Team demonstrates a legal stage change                            | S2-008, S2-009                 |       |
+| C12 | Invalid stage transition is blocked with clear feedback (negative)           | Team shows a blocked transition and warning/confirmation behavior | S2-004 to S2-009               |       |
+| C13 | Timeline reflects stage changes and activity entries                         | Timeline updates after stage/activity changes                     | S2-009, S2-010, S2-012, S2-013 |       |
+| C14 | Interview entries can be added with round/date/notes                         | Interview data is stored and visible                              | S2-010, S2-011                 |       |
+| C15 | Follow-up/reminder tracking works                                            | Follow-up item is created and visible for the job                 | S2-012                         |       |
+| C16 | Outcome tracking works                                                       | User can record or update outcome state                           | S2-013                         |       |
+| C17 | Profile sections beyond Sprint 1 are present                                 | Experience, Education, Skills, and Preferences are visible        | S2-014, S2-016 to S2-020       |       |
+| C18 | Profile validation failure shows clear field-level feedback (negative)       | Example invalid entry is rejected with useful error text          | S2-015 to S2-017               |       |
+| C19 | Duplicate skill prevention works (negative)                                  | Duplicate skill entry is blocked                                  | S2-016 to S2-020               |       |
+| C20 | AI resume draft can be generated from profile + job context                  | Draft is produced from the current job detail                     | S2-018, S2-019, S2-021         |       |
+| C21 | AI cover letter draft can be generated and rewritten                         | Draft is created and at least one improve action is shown         | S2-018, S2-019, S2-022, S2-023 |       |
+| C22 | Generated output can be saved back into job context                          | AI draft is saved and linked to the job                           | S2-019, S2-020, S2-024         |       |
+| C23 | Team opens GitHub Actions and shows latest relevant workflow run             | Actions page is shown live with recent run context                | S2-026                         |       |
+| C24 | GitHub Actions evidence shows build + unit test execution                    | Workflow details clearly include build/test jobs                  | S2-026                         |       |
+| C25 | Team is prepared to show at least three negative unit tests and explain each | Three negative tests are shown and briefly explained              | S2-008, S2-015, S2-017, S2-026 |       |
 
 ## 7. Subjective Q&A (Only Subjective Portion)
 
-Suggested Q&A prompts:
+Example Q&A prompts:
 
 1. Why does your workflow logic belong in Job Detail rather than separate screens?
 2. What is the hardest validation rule you added in Sprint 2 and why?
@@ -127,10 +127,3 @@ Suggested subjective scoring guide (0 to 5):
 1. `0-1`: unclear explanations; weak technical understanding.
 2. `2-3`: acceptable understanding with partial depth.
 3. `4-5`: clear, accurate, evidence-backed technical reasoning.
-
-## 8. Fast Grading Summary
-
-1. Objective checklist subtotal: ____ / 25
-2. Bug/failure penalties (no cap): -____
-3. Subjective Q&A score: +____ / 5
-4. Final score: ____
